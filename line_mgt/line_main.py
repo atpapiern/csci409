@@ -55,7 +55,7 @@ def get_route(line_id: str, sconfig:ServerSettings = Depends(build_server_config
     elif response.status_code == 403:
         return JSONResponse(status_code=403, content={"message": f"API Request Forbidden"})
     elif response.status_code == 404:
-        return JSONResponse(status_code=404, content={"message": f"Route {line_id} not found"})
+        return JSONResponse(status_code=404, content={"message": f"Line {line_id} not found"})
     elif response.status_code == 406:
         return JSONResponse(status_code=406, content={"message": f"Not Acceptable"})
     elif response.status_code == 429:

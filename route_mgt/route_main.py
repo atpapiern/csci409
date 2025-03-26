@@ -37,8 +37,7 @@ def get_routes(sconfig:ServerSettings = Depends(build_server_config), user: dict
             "color": route["attributes"]["color"],
             "text_color": route["attributes"]["text_color"],
             "description": route["attributes"]["description"],
-            "long_name": route["attributes"]["long_name"],
-            "type": route["attributes"]["type"],
+            "long_name": route["attributes"]["long_name"]
         })
     # Return the routes_list in JSON format
     return {"routes": routes_list}
